@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Фирменный стиль слёта · УралХим · Приэльбрусье 2026</title>
+    <meta
+      name="description"
+      content="Фирменный стиль туристического слёта молодых активных работников УралХим в Приэльбрусье 2026: логотип, худи, значок, бейдж, фирменный бланк."
+    />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=zodiak@500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+        --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+        --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+        --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+        --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+        --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --space-10: 2.5rem;
+        --space-12: 3rem;
+        --space-16: 4rem;
+        --space-20: 5rem;
+        --radius-md: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-xl: 1.25rem;
+        --radius-2xl: 1.75rem;
+        --radius-full: 9999px;
+        --color-bg: #f4f0e8;
+        --color-surface: #fbfaf6;
+        --color-surface-2: #efe8dc;
+        --color-border: #d7cdbd;
+        --color-divider: #e6dccd;
+        --color-text: #27241d;
+        --color-text-muted: #746d60;
+        --color-text-faint: #a99f90;
+        --color-primary: #2f6651;
+        --color-primary-hover: #244f3f;
+        --color-primary-highlight: #dce8de;
+        --color-blue: #486f83;
+        --color-blue-highlight: #dde7ec;
+        --shadow-sm: 0 1px 2px rgba(43, 35, 23, 0.06);
+        --shadow-md: 0 8px 24px rgba(43, 35, 23, 0.08);
+        --shadow-lg: 0 24px 60px rgba(43, 35, 23, 0.12);
+        --font-display: 'Zodiak', Georgia, serif;
+        --font-body: 'Satoshi', 'Inter', sans-serif;
+        --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--space-16);
+      }
+
+      body {
+        min-height: 100dvh;
+        line-height: 1.6;
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        color: var(--color-text);
+        background:
+          radial-gradient(circle at 80% 0%, color-mix(in oklab, var(--color-primary) 16%, transparent), transparent 34rem),
+          radial-gradient(circle at 0% 30%, color-mix(in oklab, var(--color-blue) 14%, transparent), transparent 30rem),
+          linear-gradient(180deg, var(--color-bg), color-mix(in oklab, var(--color-bg) 76%, var(--color-surface-2)));
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: color var(--transition);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - var(--space-8)));
+        margin-inline: auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        background: color-mix(in oklab, var(--color-bg) 90%, transparent);
+        backdrop-filter: blur(16px);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+        padding-block: var(--space-4);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        min-width: 0;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 2.25rem;
+        height: 2.25rem;
+        place-items: center;
+        border-radius: var(--radius-lg);
+        color: var(--color-primary);
+        background: var(--color-primary-highlight);
+        font-family: var(--font-display);
+        font-weight: 700;
+      }
+
+      .brand strong {
+        display: block;
+        font-size: var(--text-sm);
+        font-weight: 600;
+      }
+
+      .brand span {
+        display: block;
+        font-size: var(--text-xs);
+        color: var(--color-text-muted);
+      }
+
+      .nav-back {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-2) var(--space-4);
+        border-radius: var(--radius-full);
+        font-size: var(--text-sm);
+        font-weight: 500;
+        color: var(--color-primary);
+        background: var(--color-primary-highlight);
+      }
+
+      .nav-back:hover {
+        color: var(--color-primary-hover);
+        background: color-mix(in oklab, var(--color-primary-highlight) 70%, white);
+      }
+
+      main {
+        padding-block: var(--space-12) var(--space-20);
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: var(--space-16);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-2) var(--space-4);
+        border-radius: var(--radius-full);
+        background: var(--color-blue-highlight);
+        color: var(--color-blue);
+        font-size: var(--text-xs);
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: var(--space-5);
+      }
+
+      .hero h1 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: var(--text-2xl);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        max-width: 22ch;
+        margin-inline: auto;
+      }
+
+      .hero .subtitle {
+        margin-top: var(--space-5);
+        font-size: var(--text-lg);
+        color: var(--color-text-muted);
+        max-width: 48ch;
+        margin-inline: auto;
+      }
+
+      .hero-meta {
+        margin-top: var(--space-6);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        justify-content: center;
+      }
+
+      .chip {
+        padding: var(--space-2) var(--space-4);
+        border-radius: var(--radius-full);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        font-size: var(--text-xs);
+        color: var(--color-text-muted);
+        font-weight: 500;
+      }
+
+      .section {
+        margin-bottom: var(--space-16);
+      }
+
+      .section-head {
+        display: flex;
+        align-items: baseline;
+        gap: var(--space-4);
+        margin-bottom: var(--space-8);
+        flex-wrap: wrap;
+      }
+
+      .section-head h2 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: var(--text-xl);
+        letter-spacing: -0.01em;
+      }
+
+      .section-head p {
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+        max-width: 52ch;
+      }
+
+      .logo-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+        gap: var(--space-12);
+        align-items: center;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-2xl);
+        padding: clamp(var(--space-6), 4vw, var(--space-12));
+        box-shadow: var(--shadow-md);
+      }
+
+      .logo-art {
+        background: linear-gradient(160deg,
+          color-mix(in oklab, var(--color-blue) 12%, var(--color-surface)) 0%,
+          color-mix(in oklab, var(--color-primary) 14%, var(--color-surface)) 100%);
+        border-radius: var(--radius-xl);
+        padding: clamp(var(--space-4), 3vw, var(--space-8));
+        display: grid;
+        place-items: center;
+      }
+
+      .logo-art img {
+        max-height: 520px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      .logo-copy h2 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: var(--text-xl);
+        letter-spacing: -0.01em;
+        margin-bottom: var(--space-4);
+      }
+
+      .logo-copy p {
+        color: var(--color-text-muted);
+        font-size: var(--text-base);
+      }
+
+      .logo-copy p + p {
+        margin-top: var(--space-4);
+      }
+
+      .palette {
+        display: flex;
+        gap: var(--space-3);
+        margin-top: var(--space-6);
+        flex-wrap: wrap;
+      }
+
+      .swatch {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-2) var(--space-4) var(--space-2) var(--space-2);
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        font-size: var(--text-xs);
+        font-weight: 500;
+        color: var(--color-text-muted);
+      }
+
+      .swatch-dot {
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: var(--radius-full);
+        border: 2px solid color-mix(in oklab, white 70%, transparent);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .grid-carriers {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-6);
+      }
+
+      .carrier {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: var(--shadow-sm);
+        transition: transform var(--transition), box-shadow var(--transition);
+      }
+
+      .carrier:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .carrier-media {
+        background: linear-gradient(160deg,
+          color-mix(in oklab, var(--color-blue) 8%, var(--color-surface-2)) 0%,
+          color-mix(in oklab, var(--color-primary) 8%, var(--color-surface-2)) 100%);
+        padding: var(--space-6);
+        display: grid;
+        place-items: center;
+        min-height: 280px;
+      }
+
+      .carrier-media img {
+        max-height: 360px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      .carrier-body {
+        padding: var(--space-6);
+      }
+
+      .carrier-tag {
+        display: inline-block;
+        font-size: var(--text-xs);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--color-blue);
+        margin-bottom: var(--space-2);
+      }
+
+      .carrier-body h3 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-3);
+        letter-spacing: -0.01em;
+      }
+
+      .carrier-body p {
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-5);
+      }
+
+      .why-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-xl);
+        padding: var(--space-6);
+      }
+
+      .why-card .num {
+        display: inline-grid;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: var(--radius-md);
+        background: var(--color-primary-highlight);
+        color: var(--color-primary);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-4);
+      }
+
+      .why-card h3 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-2);
+        letter-spacing: -0.01em;
+      }
+
+      .why-card p {
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+      }
+
+      footer {
+        margin-top: var(--space-16);
+        padding-top: var(--space-8);
+        border-top: 1px solid var(--color-divider);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-4);
+        color: var(--color-text-faint);
+        font-size: var(--text-sm);
+      }
+
+      footer a {
+        color: var(--color-primary);
+        font-weight: 500;
+      }
+
+      footer a:hover {
+        color: var(--color-primary-hover);
+      }
+
+      @media (max-width: 860px) {
+        .logo-card {
+          grid-template-columns: 1fr;
+          gap: var(--space-8);
+        }
+
+        .grid-carriers {
+          grid-template-columns: 1fr;
+        }
+
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .brand span {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .nav-back .label-long {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shell topbar">
+        <a class="brand" href="../" aria-label="На главную">
+          <span class="brand-mark" aria-hidden="true">У</span>
+          <span>
+            <strong>УралХим · Приэльбрусье 2026</strong>
+            <span>Туристический слёт молодых активных работников</span>
+          </span>
+        </a>
+        <a class="nav-back" href="../">
+          <span aria-hidden="true">←</span>
+          <span class="label-long">К программе слёта</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero">
+        <span class="eyebrow">Brand · Identity · 2026</span>
+        <h1>Фирменный стиль туристического слёта</h1>
+        <p class="subtitle">УралХим · Приэльбрусье 2026 · Молодые активные работники</p>
+        <div class="hero-meta">
+          <span class="chip">Логотип</span>
+          <span class="chip">Худи участника</span>
+          <span class="chip">Памятный значок</span>
+          <span class="chip">Бейдж</span>
+          <span class="chip">Фирменный бланк</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <article class="logo-card">
+          <div class="logo-art">
+            <img src="logo.jpg" alt="Логотип туристического слёта УралХим в Приэльбрусье 2026" />
+          </div>
+          <div class="logo-copy">
+            <h2>Логотип слёта</h2>
+            <p>
+              Логотип разработан как единый знак маршрута, команды и заботы о себе. В нём
+              соединены силуэты молодых участников, движение в гору, линия маршрута, горный
+              ландшафт и символы безопасности, экологии и осознанности.
+            </p>
+            <p>
+              Используются фирменные цвета УралХим — насыщенный синий и зелёный, поэтому
+              стиль выглядит узнаваемо, современно и при этом точно связан с темой
+              высокогорной командной экспедиции.
+            </p>
+            <div class="palette" aria-label="Фирменная палитра">
+              <span class="swatch">
+                <span class="swatch-dot" style="background:#1f3a8a"></span>
+                УралХим Синий
+              </span>
+              <span class="swatch">
+                <span class="swatch-dot" style="background:#2f6651"></span>
+                УралХим Зелёный
+              </span>
+              <span class="swatch">
+                <span class="swatch-dot" style="background:#f4f0e8"></span>
+                Тёплый светлый
+              </span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Стиль на носителях</h2>
+          <p>
+            Как фирменный знак работает на одежде, сувенирах и рабочих документах слёта —
+            от первого впечатления у трапа автобуса до итоговой страницы маршрутного листа.
+          </p>
+        </div>
+        <div class="grid-carriers">
+          <article class="carrier">
+            <div class="carrier-media">
+              <img src="tolstovka-2.jpg" alt="Худи участника слёта с логотипом" />
+            </div>
+            <div class="carrier-body">
+              <span class="carrier-tag">01 · Одежда</span>
+              <h3>Худи участника</h3>
+              <p>
+                Главный командный носитель: крупный знак на спине читается со склона и в
+                кадре, компактная версия на груди работает в портретных съёмках и на встречах.
+              </p>
+            </div>
+          </article>
+
+          <article class="carrier">
+            <div class="carrier-media">
+              <img src="znachek-3.jpg" alt="Памятный значок участника слёта" />
+            </div>
+            <div class="carrier-body">
+              <span class="carrier-tag">02 · Сувенир</span>
+              <h3>Памятный значок</h3>
+              <p>
+                Компактный сувенирный формат: фирменный знак в круглой композиции, который
+                остаётся у участника как личный артефакт после возвращения с маршрута.
+              </p>
+            </div>
+          </article>
+
+          <article class="carrier">
+            <div class="carrier-media">
+              <img src="Beidzh-4.jpg" alt="Бейдж участника слёта" />
+            </div>
+            <div class="carrier-body">
+              <span class="carrier-tag">03 · Идентификация</span>
+              <h3>Бейдж участника</h3>
+              <p>
+                Персонализация со стороны участника: имя, навигационная волна и горный
+                мотив. Помогает быстро знакомиться внутри команд и собирать общий ритм слёта.
+              </p>
+            </div>
+          </article>
+
+          <article class="carrier">
+            <div class="carrier-media">
+              <img src="Blank-5.jpg" alt="Фирменный бланк слёта" />
+            </div>
+            <div class="carrier-body">
+              <span class="carrier-tag">04 · Документы</span>
+              <h3>Фирменный бланк</h3>
+              <p>
+                Носитель для маршрутных листов, заданий, командных правил, итоговых фраз
+                и благодарностей. Превращает рабочую распечатку в часть впечатления.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Почему это работает для события</h2>
+          <p>Четыре опоры, которые превращают визуальный стиль в инструмент слёта.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card">
+            <span class="num">1</span>
+            <h3>Узнаваемость УралХим</h3>
+            <p>
+              Фирменные синий и зелёный сразу считываются как корпоративные — слёт
+              выглядит частью бренда, а не отдельным внешним мероприятием.
+            </p>
+          </article>
+          <article class="why-card">
+            <span class="num">2</span>
+            <h3>Связь с маршрутом и горами</h3>
+            <p>
+              Линия маршрута, силуэт вершины и движение в гору задают контекст
+              Приэльбрусья и физической активности — стиль работает на месте, а не только
+              в презентации.
+            </p>
+          </article>
+          <article class="why-card">
+            <span class="num">3</span>
+            <h3>Командность и молодёжная энергия</h3>
+            <p>
+              Силуэты участников и динамика композиции говорят о молодых активных
+              работниках: это про людей, движение и совместное прохождение маршрута.
+            </p>
+          </article>
+          <article class="why-card">
+            <span class="num">4</span>
+            <h3>Три смысловые опоры</h3>
+            <p>
+              Безопасность, экология и осознанность зашиты в графику как символы — стиль
+              напоминает о ценностях слёта на каждом носителе, от худи до бланка задания.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <span>УралХим · Приэльбрусье 2026 · Фирменный стиль слёта</span>
+        <a href="../">← Вернуться к программе слёта</a>
+      </footer>
+    </main>
+  </body>
+</html>
