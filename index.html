@@ -1,0 +1,1304 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Рабочая структура туристического слёта УралХим в Приэльбрусье</title>
+    <meta
+      name="description"
+      content="Рабочая структура, концепция и каталог активностей туристического слёта молодых специалистов УралХим в Приэльбрусье."
+    />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=zodiak@500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root,
+      [data-theme='light'] {
+        --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+        --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+        --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+        --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+        --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+        --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --space-10: 2.5rem;
+        --space-12: 3rem;
+        --space-16: 4rem;
+        --space-20: 5rem;
+        --radius-sm: 0.375rem;
+        --radius-md: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-xl: 1.25rem;
+        --radius-full: 9999px;
+        --color-bg: #f4f0e8;
+        --color-surface: #fbfaf6;
+        --color-surface-2: #efe8dc;
+        --color-surface-offset: #e5ded1;
+        --color-border: #d7cdbd;
+        --color-divider: #e6dccd;
+        --color-text: #27241d;
+        --color-text-muted: #746d60;
+        --color-text-faint: #a99f90;
+        --color-primary: #2f6651;
+        --color-primary-hover: #244f3f;
+        --color-primary-highlight: #dce8de;
+        --color-gold: #b9832f;
+        --color-blue: #486f83;
+        --color-success: #587a31;
+        --color-warning: #8f5425;
+        --shadow-sm: 0 1px 2px rgba(43, 35, 23, 0.06);
+        --shadow-md: 0 8px 24px rgba(43, 35, 23, 0.08);
+        --shadow-lg: 0 24px 60px rgba(43, 35, 23, 0.12);
+        --font-display: 'Zodiak', Georgia, serif;
+        --font-body: 'Satoshi', 'Inter', sans-serif;
+        --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      [data-theme='dark'] {
+        --color-bg: #171914;
+        --color-surface: #20221c;
+        --color-surface-2: #282b22;
+        --color-surface-offset: #303429;
+        --color-border: #45483d;
+        --color-divider: #303329;
+        --color-text: #e7e1d5;
+        --color-text-muted: #b0a99a;
+        --color-text-faint: #7f786b;
+        --color-primary: #8eb79d;
+        --color-primary-hover: #a6c8b0;
+        --color-primary-highlight: #2f3b31;
+        --color-gold: #d5a756;
+        --color-blue: #89a9b7;
+        --color-success: #9fbd6b;
+        --color-warning: #d4945b;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.18);
+        --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.25);
+        --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.34);
+      }
+
+      html {
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--space-16);
+      }
+
+      body {
+        min-height: 100dvh;
+        line-height: 1.6;
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        color: var(--color-text);
+        background:
+          radial-gradient(circle at 80% 0%, color-mix(in oklab, var(--color-primary) 16%, transparent), transparent 34rem),
+          linear-gradient(180deg, var(--color-bg), color-mix(in oklab, var(--color-bg) 76%, var(--color-surface-2)));
+      }
+
+      a,
+      button {
+        color: inherit;
+        transition:
+          color var(--transition-interactive),
+          background var(--transition-interactive),
+          border-color var(--transition-interactive),
+          box-shadow var(--transition-interactive);
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      button {
+        border: 0;
+        cursor: pointer;
+        font: inherit;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 3px;
+        border-radius: var(--radius-sm);
+      }
+
+      .skip-link {
+        position: absolute;
+        left: var(--space-4);
+        top: var(--space-4);
+        z-index: 100;
+        transform: translateY(-150%);
+        border-radius: var(--radius-full);
+        background: var(--color-text);
+        color: var(--color-bg);
+        padding: var(--space-2) var(--space-4);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - var(--space-8)));
+        margin-inline: auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        background: color-mix(in oklab, var(--color-bg) 90%, transparent);
+        backdrop-filter: blur(16px);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+        padding-block: var(--space-4);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        min-width: 0;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 2.25rem;
+        height: 2.25rem;
+        place-items: center;
+        border-radius: var(--radius-lg);
+        color: var(--color-primary);
+        background: var(--color-primary-highlight);
+      }
+
+      .brand strong {
+        display: block;
+        font-size: var(--text-sm);
+        letter-spacing: 0.01em;
+      }
+
+      .brand span {
+        display: block;
+        color: var(--color-text-muted);
+        font-size: var(--text-xs);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+      }
+
+      .chip,
+      .theme-toggle,
+      .nav-link {
+        min-height: 44px;
+        border: 1px solid color-mix(in oklab, var(--color-border) 84%, transparent);
+        border-radius: var(--radius-full);
+        background: color-mix(in oklab, var(--color-surface) 84%, transparent);
+        padding: var(--space-2) var(--space-4);
+        color: var(--color-text);
+        font-size: var(--text-sm);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .theme-toggle {
+        width: 44px;
+        padding: 0;
+      }
+
+      .chip {
+        color: var(--color-text-muted);
+      }
+
+      .hero {
+        padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+        gap: var(--space-10);
+        align-items: end;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: var(--space-2);
+        border: 1px solid color-mix(in oklab, var(--color-primary) 22%, var(--color-border));
+        border-radius: var(--radius-full);
+        background: color-mix(in oklab, var(--color-primary-highlight) 64%, transparent);
+        color: var(--color-primary-hover);
+        font-size: var(--text-xs);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        padding: var(--space-2) var(--space-4);
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-display);
+        line-height: 1.08;
+        text-wrap: balance;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin-top: var(--space-5);
+        font-size: var(--text-2xl);
+        font-weight: 700;
+        letter-spacing: -0.035em;
+      }
+
+      h2 {
+        font-size: var(--text-xl);
+        letter-spacing: -0.025em;
+      }
+
+      h3 {
+        font-size: var(--text-lg);
+        letter-spacing: -0.015em;
+      }
+
+      p,
+      li {
+        max-width: 72ch;
+      }
+
+      .lede {
+        max-width: 760px;
+        margin-top: var(--space-5);
+        color: var(--color-text-muted);
+        font-size: var(--text-lg);
+      }
+
+      .hero-card {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid color-mix(in oklab, var(--color-border) 76%, transparent);
+        border-radius: calc(var(--radius-xl) + var(--space-2));
+        background: linear-gradient(155deg, var(--color-surface), color-mix(in oklab, var(--color-surface-2) 75%, var(--color-primary-highlight)));
+        box-shadow: var(--shadow-lg);
+        padding: var(--space-6);
+      }
+
+      .mountain-line {
+        margin-block: var(--space-4);
+        color: var(--color-primary);
+        opacity: 0.9;
+      }
+
+      .hero-card dl {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .hero-card dt {
+        color: var(--color-text-muted);
+        font-size: var(--text-xs);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero-card dd {
+        margin-top: var(--space-1);
+        font-weight: 700;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: var(--space-10);
+        align-items: start;
+        padding-bottom: var(--space-20);
+      }
+
+      aside {
+        position: sticky;
+        top: 88px;
+        border: 1px solid color-mix(in oklab, var(--color-border) 76%, transparent);
+        border-radius: var(--radius-xl);
+        background: color-mix(in oklab, var(--color-surface) 84%, transparent);
+        box-shadow: var(--shadow-md);
+        padding: var(--space-4);
+      }
+
+      nav[aria-label='Оглавление'] {
+        display: grid;
+        gap: var(--space-2);
+      }
+
+      nav h2 {
+        margin-bottom: var(--space-2);
+        font-family: var(--font-body);
+        font-size: var(--text-sm);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav-link {
+        display: block;
+        min-height: auto;
+        border-radius: var(--radius-lg);
+        box-shadow: none;
+      }
+
+      .nav-link:hover {
+        border-color: color-mix(in oklab, var(--color-primary) 36%, var(--color-border));
+        background: var(--color-primary-highlight);
+        color: var(--color-primary-hover);
+      }
+
+      main {
+        display: grid;
+        gap: var(--space-8);
+      }
+
+      section,
+      article {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 520px;
+      }
+
+      .section-card {
+        border: 1px solid color-mix(in oklab, var(--color-border) 74%, transparent);
+        border-radius: calc(var(--radius-xl) + var(--space-1));
+        background: color-mix(in oklab, var(--color-surface) 92%, transparent);
+        box-shadow: var(--shadow-md);
+        padding: clamp(var(--space-5), 4vw, var(--space-8));
+      }
+
+      .section-head {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: var(--space-4);
+        margin-bottom: var(--space-6);
+      }
+
+      .section-head p {
+        margin-top: var(--space-3);
+        color: var(--color-text-muted);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        border-radius: var(--radius-full);
+        background: var(--color-primary-highlight);
+        color: var(--color-primary-hover);
+        font-size: var(--text-xs);
+        font-weight: 700;
+        padding: var(--space-1) var(--space-3);
+        white-space: nowrap;
+      }
+
+      .grid-2,
+      .grid-3 {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .mini-card,
+      .day-card,
+      .activity-card {
+        border: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        border-radius: var(--radius-xl);
+        background: color-mix(in oklab, var(--color-surface-2) 34%, var(--color-surface));
+        padding: var(--space-5);
+      }
+
+      .mini-card strong,
+      .day-card strong {
+        display: block;
+        margin-bottom: var(--space-2);
+        color: var(--color-text);
+      }
+
+      .mini-card p,
+      .day-card p,
+      .activity-card p {
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+      }
+
+      .list {
+        display: grid;
+        gap: var(--space-3);
+        list-style: none;
+      }
+
+      .list li {
+        position: relative;
+        padding-left: var(--space-5);
+        color: var(--color-text-muted);
+      }
+
+      .list li::before {
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: var(--radius-full);
+        background: var(--color-primary);
+        content: '';
+      }
+
+      .timeline {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .day-card {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: var(--space-5);
+      }
+
+      .day-card time {
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+
+      .day-card a {
+        color: var(--color-primary);
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-color: color-mix(in oklab, var(--color-primary) 28%, transparent);
+        text-underline-offset: 0.18em;
+      }
+
+      .flow-table {
+        overflow-x: auto;
+        border: 1px solid color-mix(in oklab, var(--color-border) 76%, transparent);
+        border-radius: var(--radius-xl);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 760px;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid var(--color-divider);
+        padding: var(--space-3) var(--space-4);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: color-mix(in oklab, var(--color-primary-highlight) 54%, transparent);
+        color: var(--color-primary-hover);
+        font-size: var(--text-xs);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .activity-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+        gap: var(--space-6);
+        align-items: stretch;
+      }
+
+      .poster {
+        position: relative;
+        min-height: 360px;
+        overflow: hidden;
+        border: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        border-radius: var(--radius-xl);
+        background:
+          linear-gradient(180deg, color-mix(in oklab, var(--color-blue) 20%, var(--color-surface)), var(--color-surface)),
+          radial-gradient(circle at 25% 18%, color-mix(in oklab, var(--color-gold) 18%, transparent), transparent 12rem);
+        padding: var(--space-5);
+      }
+
+      .trail {
+        position: absolute;
+        inset: 18% 8% 12% 8%;
+        color: color-mix(in oklab, var(--color-primary) 62%, var(--color-text));
+      }
+
+      .hiker {
+        position: absolute;
+        display: grid;
+        gap: var(--space-1);
+        width: 84px;
+        justify-items: center;
+        color: var(--color-text);
+        font-size: 0.68rem;
+        font-weight: 700;
+      }
+
+      .hiker .head {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--color-gold);
+        box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-gold) 25%, transparent);
+      }
+
+      .hiker .body {
+        width: 24px;
+        height: 34px;
+        border-radius: 12px 12px 8px 8px;
+        background: var(--color-primary);
+      }
+
+      .hiker .pack {
+        width: 42px;
+        min-height: 24px;
+        border: 1px dashed color-mix(in oklab, var(--color-primary) 58%, var(--color-border));
+        border-radius: var(--radius-md);
+        background: color-mix(in oklab, var(--color-surface) 78%, transparent);
+      }
+
+      .hiker .name {
+        border-radius: var(--radius-full);
+        background: var(--color-surface);
+        padding: 0.08rem 0.45rem;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .h1 {
+        left: 8%;
+        bottom: 14%;
+      }
+      .h2 {
+        left: 22%;
+        bottom: 28%;
+      }
+      .h3 {
+        left: 36%;
+        bottom: 42%;
+      }
+      .h4 {
+        left: 54%;
+        bottom: 55%;
+      }
+      .h5 {
+        left: 70%;
+        bottom: 68%;
+      }
+
+      .activity-details {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .detail-row {
+        border-radius: var(--radius-lg);
+        background: color-mix(in oklab, var(--color-surface-2) 42%, transparent);
+        padding: var(--space-4);
+      }
+
+      .detail-row strong {
+        display: block;
+        margin-bottom: var(--space-1);
+      }
+
+      footer {
+        border-top: 1px solid var(--color-divider);
+        padding-block: var(--space-8);
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+      }
+
+      @media (max-width: 920px) {
+        .hero-grid,
+        .layout,
+        .activity-hero {
+          grid-template-columns: 1fr;
+        }
+
+        aside {
+          position: static;
+        }
+
+        .grid-2,
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+
+        .day-card {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .shell {
+          width: min(100% - var(--space-5), 1180px);
+        }
+
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .header-actions {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .chip {
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Перейти к содержанию</a>
+    <header>
+      <div class="shell topbar">
+        <a class="brand" href="#top" aria-label="К началу документа">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <path d="M3 19.5 10.6 7.2l4.1 6.8 2.2-3.2L23 19.5H3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+              <path d="M10.6 7.2 12 13h2.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span>
+            <strong>УралХим · Приэльбрусье</strong>
+            <span>Рабочая карта концепции и активностей</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <span class="chip">25–28 июня 2026</span>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div id="top" class="shell hero">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Рабочая структура</span>
+          <h1>Туристический слёт УралХим в Приэльбрусье</h1>
+          <p class="lede">
+            Основа для пошаговой разработки концепции, маршрутных активностей, командной механики и финальной кульминации. Активности будут добавляться отдельными главами и связываться гиперссылками с общей структурой.
+          </p>
+        </div>
+        <aside class="hero-card" aria-label="Ключевые параметры">
+          <svg class="mountain-line" viewBox="0 0 420 120" fill="none" aria-hidden="true">
+            <path d="M10 96h400M34 96 112 26l42 48 31-30 74 52 42-64 85 64" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <dl>
+            <div>
+              <dt>Участники</dt>
+              <dd>110 молодых специалистов</dd>
+            </div>
+            <div>
+              <dt>Концепт</dt>
+              <dd>Высота заботы · Код высоты</dd>
+            </div>
+            <div>
+              <dt>Механика</dt>
+              <dd>Команды 8–10 человек, конверты, таблички, коды</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+
+    <div class="shell layout">
+      <aside>
+        <nav aria-label="Оглавление">
+          <h2>Навигация</h2>
+          <a class="nav-link" href="#brief">Рабочая структура</a>
+          <a class="nav-link" href="#concept">Концепция</a>
+          <a class="nav-link" href="#mechanics">Командная механика</a>
+          <a class="nav-link" href="#program">Карта программы</a>
+          <a class="nav-link" href="#activity-chain">Сквозная цепочка</a>
+          <a class="nav-link" href="#surpriseme-26">SurpriseMe 26 июня</a>
+          <a class="nav-link" href="#activities">Главы активностей</a>
+          <a class="nav-link" href="#activity-team-route">Активность: Команда на маршруте</a>
+          <a class="nav-link" href="#activity-tourist-casting">Активность: Туристический кастинг</a>
+          <a class="nav-link" href="#activity-choir-battle">Активность: Битва хоров</a>
+          <a class="nav-link" href="#template">Шаблон разработки</a>
+        </nav>
+      </aside>
+
+      <main id="content">
+        <section id="brief" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Рабочая структура туристического слёта</h2>
+            </div>
+            <span class="badge">Версия 1</span>
+          </div>
+          <div class="grid-2">
+            <div class="mini-card">
+              <strong>Общая тема</strong>
+              <p>«Забота о себе» в контексте безопасности, экологии, личного здоровья и ЗОЖ.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Главная задача</strong>
+              <p>Превратить тайминг в единую драматургию, ведущую участников к общему финалу.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="concept" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Рекомендуемая концептуальная рамка</h2>
+              <p>Участники проходят не набор отдельных мероприятий, а последовательный маршрут заботы.</p>
+            </div>
+            <span class="badge">Сквозной смысл</span>
+          </div>
+          <div class="grid-2">
+            <div class="mini-card">
+              <strong>Рабочее название</strong>
+              <p>«Высота заботы». Альтернативы: «Маршрут заботы», «Код высоты», «Точка опоры», «Путь к своей вершине».</p>
+            </div>
+            <div class="mini-card">
+              <strong>Финальная идея</strong>
+              <p>Команды собирают общий «Код высоты» или «Манифест заботы молодых специалистов УралХим».</p>
+            </div>
+          </div>
+          <ul class="list" style="margin-top: var(--space-5)">
+            <li><strong>Забота о себе:</strong> здоровье, энергия, осознанность, профилактика рисков.</li>
+            <li><strong>Забота о других:</strong> безопасность, взаимовыручка, первая помощь, командное движение.</li>
+            <li><strong>Забота о среде:</strong> экологичное поведение, бережное отношение к месту, след после себя.</li>
+          </ul>
+        </section>
+
+        <section id="mechanics" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Командная и операционная механика</h2>
+            </div>
+            <span class="badge">8–10 человек</span>
+          </div>
+          <div class="grid-2">
+            <div class="mini-card">
+              <strong>Команды</strong>
+              <p>Оптимально 12 команд по 9–10 человек или 11 команд по 10 человек, если так проще синхронизироваться с гидами.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Носители сценария</strong>
+              <p>Конверты, таблички на маршруте, указатели, QR-коды, кодовые слова, карточки заданий, маршрутный паспорт, возможно SurpriseMe.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Иван Гусаров</strong>
+              <p>Ведёт открытие и финал, задаёт рамку, объясняет зачем команды собирают коды и раскрывает смысл в кульминации.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Администратор и гиды</strong>
+              <p>Администратор расставляет материалы и инструктирует гидов; гиды выдают конверты, сообщают коды и следят за безопасным темпом.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="program" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Карта программы по дням</h2>
+              <p>Каждый день имеет свой смысл и должен давать командам часть общей финальной конструкции.</p>
+            </div>
+            <span class="badge">Тайминг</span>
+          </div>
+          <div class="timeline">
+            <article class="day-card">
+              <time>25 июня · четверг</time>
+              <div>
+                <strong>День приезда и настройки</strong>
+                <p>Приезд, заселение, ужин, открытие, 30 минут правил безопасности, запуск командной работы через активность <a href="#activity-team-route">«Команда на маршруте»</a> и раскрепощающая игра <a href="#activity-tourist-casting">«Туристический кастинг»</a>.</p>
+              </div>
+            </article>
+            <article class="day-card">
+              <time>26 июня · пятница</time>
+              <div>
+                <strong>День безопасности</strong>
+                <p>Чегет, подъём до Чегет-3, треккинговые палки, озеро Донгуз Орун кёль, практикумы по вниманию, движению и первой помощи. Для маршрута используем <a href="#surpriseme-26">офлайн-сценарий SurpriseMe</a> с заранее загруженными GPS-точками и заданиями; вечером проводим <a href="#activity-choir-battle">«Битву хоров»</a> с фуршетом в ресторане отеля.</p>
+              </div>
+            </article>
+            <article class="day-card">
+              <time>27 июня · суббота</time>
+              <div>
+                <strong>День экологии и День молодёжи</strong>
+                <p>Маршрут к водопаду Девичьи косы, экологические задания, диалог «без галстуков» и праздничный ужин.</p>
+              </div>
+            </article>
+            <article class="day-card">
+              <time>28 июня · воскресенье</time>
+              <div>
+                <strong>День достижения целей и общего финала</strong>
+                <p>Подъём на «Гарабаши», мотивационный блок, общий сбор команд, финальный «Код высоты» или «Манифест заботы».</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="activity-chain" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Предварительная сквозная цепочка активностей</h2>
+              <p>Таблица будет уточняться по мере разработки каждой точки маршрута.</p>
+            </div>
+            <span class="badge">Черновик</span>
+          </div>
+          <div class="flow-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Этап</th>
+                  <th>Когда</th>
+                  <th>Смысл</th>
+                  <th>Механика</th>
+                  <th>Артефакт</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Запуск</td>
+                  <td>Четверг, открытие</td>
+                  <td>Вход в тему и правила</td>
+                  <td><a href="#activity-team-route">Плакат команды, ведущий, первый конверт</a></td>
+                  <td>Плакат и паспорт команды</td>
+                </tr>
+                <tr>
+                  <td>Раскрепощение</td>
+                  <td>Четверг, вечер</td>
+                  <td>Первый общий азарт и снятие скованности</td>
+                  <td><a href="#activity-tourist-casting">Шуточные роли, головные уборы, ситуации от ведущего</a></td>
+                  <td>Роль команды и настрой на приключение</td>
+                </tr>
+                <tr>
+                  <td>Подготовка</td>
+                  <td>Четверг, безопасность</td>
+                  <td>Забота начинается с подготовки</td>
+                  <td>Инструктаж и код после блока безопасности</td>
+                  <td>Код 1</td>
+                </tr>
+                <tr>
+                  <td>Движение</td>
+                  <td>Пятница, Чегет</td>
+                  <td>Осознанность на маршруте</td>
+                  <td><a href="#surpriseme-26">Офлайн-точки SurpriseMe, таблички, подсказки, задания от гида</a></td>
+                  <td>Карточка безопасности</td>
+                </tr>
+                <tr>
+                  <td>Голос команды</td>
+                  <td>Пятница, вечер</td>
+                  <td>Эмоциональное сплочение после маршрута</td>
+                  <td><a href="#activity-choir-battle">«Битва хоров», караоке-система, кнопки, ведущий и диджей</a></td>
+                  <td>Командная энергия и общий вечер</td>
+                </tr>
+                <tr>
+                  <td>Среда</td>
+                  <td>Суббота, маршрут</td>
+                  <td>Забота о природе</td>
+                  <td>Эко-наблюдение / безопасная акция</td>
+                  <td>Карточка экологии</td>
+                </tr>
+                <tr>
+                  <td>Вершина</td>
+                  <td>Воскресенье, Гарабаши</td>
+                  <td>Личная и общая цель</td>
+                  <td>Общий финал Ивана</td>
+                  <td>Манифест / общий символ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="surpriseme-26" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>26 июня: офлайн-сценарий SurpriseMe</h2>
+              <p>Связи на маршруте нет, поэтому приложение используем как заранее загруженный путеводитель по «Коду безопасности»: GPS-точки, короткие задания, коды и дублирование через гидов.</p>
+            </div>
+            <span class="badge">GPS · офлайн</span>
+          </div>
+
+          <div class="grid-2">
+            <div class="mini-card">
+              <strong>Принцип работы</strong>
+              <p>Маршрут, тексты, задания и точки заранее загружаются в приложение. Команда подходит к точке, GPS открывает задание, а гид держит бумажный дубль в конверте на случай сбоя.</p>
+            </div>
+          </div>
+
+          <div class="flow-table" style="margin-top: var(--space-6)">
+            <table>
+              <thead>
+                <tr>
+                  <th>Точка</th>
+                  <th>Задание в SurpriseMe</th>
+                  <th>Что делает команда</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Старт у гостиницы</td>
+                  <td>«Готовность к выходу»</td>
+                  <td>Проходит чек-лист: вода, одежда, обувь, связь, самочувствие, настроение. В конце выбирает общий сигнал «нам нужна пауза».</td>
+                </tr>
+                <tr>
+                  <td>Чегет / первая обзорная точка</td>
+                  <td>«Найди риск»</td>
+                  <td>Находит вокруг 3 фактора риска: погода, высота, солнце, ветер, усталость, камни, дистанция. Выбирает главный риск дня.</td>
+                </tr>
+                <tr>
+                  <td>Чегет / обзорный участок</td>
+                  <td>«Здесь и сейчас»</td>
+                  <td>Читает короткую познавательную заметку о месте и получает мотивирующую фразу: остановиться на минуту, почувствовать высоту, людей рядом и свою команду.</td>
+                </tr>
+                <tr>
+                  <td>Чегет-3</td>
+                  <td>«Высота внимания»</td>
+                  <td>Отвечает на короткий тест: какие признаки говорят, что человеку нужна пауза. После ответа получает кодовое слово.</td>
+                </tr>
+                <tr>
+                  <td>Перед тропой к озеру</td>
+                  <td>«Опора»</td>
+                  <td>После инструктажа по палкам выбирает 3 правила безопасного движения на подъёме и спуске.</td>
+                </tr>
+                <tr>
+                  <td>На маршруте</td>
+                  <td>«Тихий наблюдатель»</td>
+                  <td>3 минуты идёт молча и замечает: кто держит темп, кто отстаёт, где нужна поддержка. Потом команда коротко обсуждает вывод.</td>
+                </tr>
+                <tr>
+                  <td>Озеро Донгуз Орун кёль</td>
+                  <td>«Помоги рядом»</td>
+                  <td>Получает ситуацию: натёртость, усталость, обезвоживание, тревога или потеря темпа. Выбирает правильный порядок действий.</td>
+                </tr>
+                <tr>
+                  <td>Озеро / точка паузы</td>
+                  <td>«Команда в моменте»</td>
+                  <td>Читает короткое сообщение о месте как точке восстановления и получает фразу-настрой: быть внимательным к себе, к тишине вокруг и к людям, с которыми идёшь.</td>
+                </tr>
+                <tr>
+                  <td>Озеро / перекус</td>
+                  <td>«Код безопасности»</td>
+                  <td>Собирает итоговую фразу дня: «Мы идём безопасно, если…» и получает часть финального кода.</td>
+                </tr>
+                <tr>
+                  <td>Возвращение</td>
+                  <td>«Что сработало»</td>
+                  <td>Выбирает одно действие команды, которое реально помогло на маршруте: пауза, вода, поддержка, темп, внимание или юмор.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid-2" style="margin-top: var(--space-6)">
+            <div class="mini-card">
+              <strong>Что отдаём приложению</strong>
+              <p>GPS-открытие точек, короткие тесты, выборы команды, кодовые слова и атмосферные сообщения вроде «Вы на первой высоте заботы».</p>
+            </div>
+            <div class="mini-card">
+              <strong>Что оставляем гидам</strong>
+              <p>Физическую безопасность, управление темпом, выдачу бумажных конвертов, резервные коды и разведение групп на точках.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="activities" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Главы активностей</h2>
+              <p>Ниже будут накапливаться все придуманные активности. Для каждой сохраняем краткую версию для плана и подробную версию для сценария.</p>
+            </div>
+            <span class="badge">Каталог</span>
+          </div>
+          <div class="grid-2">
+            <a class="activity-card" href="#activity-team-route">
+              <strong>1. Команда на маршруте</strong>
+              <p>20:40–21:10 · Первый вечер: знакомство, персональный выбор роли и распределение ответственности через плакат А3.</p>
+            </a>
+            <a class="activity-card" href="#activity-tourist-casting">
+              <strong>2. Туристический кастинг</strong>
+              <p>21:10–21:50 · Весёлая активность с шуточными ролями и ситуациями от ведущего для раскрепощения команд.</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>3. Готовность к выходу</strong>
+              <p>26 июня, старт у гостиницы · Командный чек-лист перед маршрутом: вода, одежда, обувь, связь, самочувствие и общий сигнал паузы.</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>4. Найди риск</strong>
+              <p>26 июня, Чегет · Команда замечает 3 фактора риска вокруг и выбирает главный риск дня.</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>5. Здесь и сейчас</strong>
+              <p>26 июня, Чегет · Познавательная GPS-заметка о месте и короткая мотивация быть в моменте и в своей команде.</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>6. Высота внимания</strong>
+              <p>26 июня, Чегет-3 · Короткий тест на признаки усталости и необходимости паузы.</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>7. Опора</strong>
+              <p>26 июня, перед тропой к озеру · Закрепление правил безопасного движения с треккинговыми палками.</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>8. Тихий наблюдатель</strong>
+              <p>26 июня, на маршруте · 3 минуты внимательного движения и наблюдения за темпом, поддержкой и состоянием команды.</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>9. Помоги рядом</strong>
+              <p>26 июня, озеро Донгуз Орун кёль · Ситуация первой помощи или поддержки: усталость, натёртость, обезвоживание, тревога.</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>10. Команда в моменте</strong>
+              <p>26 июня, озеро · Познавательная заметка о точке восстановления и настрой на внимание к себе, месту и людям рядом.</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>11. Код безопасности</strong>
+              <p>26 июня, перекус · Команда собирает итоговую фразу дня: «Мы идём безопасно, если…».</p>
+            </a>
+            <a class="activity-card" href="#surpriseme-26">
+              <strong>12. Что сработало</strong>
+              <p>26 июня, возвращение · Короткий дебриф: какое действие команды реально помогло на маршруте.</p>
+            </a>
+            <a class="activity-card" href="#activity-choir-battle">
+              <strong>13. Битва хоров: голос команды</strong>
+              <p>26 июня, вечер · Развлекательная программа с фуршетом в ресторане отеля, ведущим, караоке-системой, кнопками и диджеем.</p>
+            </a>
+          </div>
+        </section>
+
+        <article id="activity-team-route" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Активность первого вечера: «Команда на маршруте»</h2>
+              <p>Выбранная активность для итогового сценария. Формат подходит после дороги и 30-минутного блока правил безопасности.</p>
+            </div>
+            <span class="badge">20:40–21:10</span>
+          </div>
+
+          <div class="activity-hero">
+            <div class="poster" aria-label="Схематичная визуализация плаката А3">
+              <svg class="trail" viewBox="0 0 420 250" fill="none" aria-hidden="true">
+                <path d="M18 218C86 188 111 148 165 136c58-13 76-58 126-72 38-10 61-18 105-48" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-dasharray="4 18" />
+                <path d="M26 224 150 90l58 58 50-72 138 148H26Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" opacity=".24" />
+              </svg>
+              <div class="hiker h1"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+              <div class="hiker h2"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+              <div class="hiker h3"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+              <div class="hiker h4"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+              <div class="hiker h5"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+            </div>
+
+            <div class="activity-details">
+              <div class="detail-row">
+                <strong>Краткое описание</strong>
+                <p>Каждая команда получает плакат А3 с изображением людей, идущих в гору с рюкзаками; участники выбирают себе место на маршруте, подписывают бейджик и наклеивают на свой рюкзак 2–3 уникальных предмета, качества или принципа, которые они лично «несут» для команды. Так команда сразу знакомится, распределяет ответственность и визуально видит, кто какую роль готов взять на себя в общем пути.</p>
+              </div>
+              <div class="detail-row">
+                <strong>Подробное описание</strong>
+                <p>На плакате изображены 8–10 участников на горной тропе; у каждого есть место для имени и отдельный рюкзак. Участники по очереди выбирают себе позицию, подписывают бейджик и клеят 2–3 уникальные наклейки: предметы безопасности, личные качества, принципы заботы или ресурсы команды.</p>
+              </div>
+              <div class="detail-row">
+                <strong>Смысл</strong>
+                <p>В упражнении становится видно, кто выбирает место первым или последним, кто хочет идти впереди, в середине или замыкающим, кто берёт ответственность за безопасность, поддержку, порядок, энергию или внимательность.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="activity-tourist-casting" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Активность первого вечера: «Туристический кастинг»</h2>
+              <p>Раскрепощающая и сплачивающая игра после дороги: весёлая, но связанная с общей идеей заботы, безопасности и командного движения.</p>
+            </div>
+            <span class="badge">21:10–21:50</span>
+          </div>
+
+          <div class="grid-2">
+            <div class="activity-details">
+              <div class="detail-row">
+                <strong>Краткое описание</strong>
+                <p>Иван объявляет шуточный отбор экспедиций, а участники внутри команды распределяют роли — «навигатор», «хранитель настроения», «человек-аптечка», «эко-дозорный», «замыкающий», «мотиватор» — и надевают карточки, повязки или лёгкие головные уборы с названиями.</p>
+                <p style="margin-top: var(--space-3)">Затем ведущий задаёт неожиданные походные ситуации: кто-то устал, начался дождь, команда потеряла темп, нашли мусор или участник забыл воду, а команда весело показывает, как будет действовать; через юмор люди знакомятся, раскрепощаются и проявляют свои роли в заботе о себе и друг о друге.</p>
+              </div>
+              <div class="detail-row">
+                <strong>Цель</strong>
+                <p>Снять скованность после дороги, создать первое впечатление от слёта как от необычного приключения и дать участникам почувствовать, что впереди их ждёт не просто поход, а командная экспедиция.</p>
+              </div>
+            </div>
+
+            <div class="activity-details">
+              <div class="detail-row">
+                <strong>Как проходит</strong>
+                <p>Команды получают набор шуточных ролей и быстро распределяют их между участниками. После этого Иван по очереди объявляет ситуации, а команды в формате коротких мини-сценок показывают свою реакцию, используя выбранные роли.</p>
+              </div>
+              <div class="detail-row">
+                <strong>Материалы</strong>
+                <p>Карточки ролей, повязки или лёгкие головные уборы, конверты с ситуациями, маршрутный паспорт команды для фиксации первого командного настроя.</p>
+              </div>
+              <div class="detail-row">
+                <strong>Вклад в финал</strong>
+                <p>Команда получает свой первый игровой образ и может сохранить его как часть дальнейшего маршрута: роль, фразу, жест или способ поддерживать друг друга в сложных моментах.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="activity-choir-battle" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Вечер 26 июня: «Битва хоров»</h2>
+              <p>Развлекательная программа, совмещённая с фуршетом в ресторане отеля. После маршрутного дня команды переключаются в эмоциональный, музыкальный и объединяющий формат.</p>
+            </div>
+            <span class="badge">26 июня · вечер</span>
+          </div>
+
+          <div class="grid-2">
+            <div class="activity-details">
+              <div class="detail-row">
+                <strong>Краткое описание</strong>
+                <p>Иван Гусаров проводит командную «Битву хоров» с использованием специального программного обеспечения, караоке-машины и кнопок. Команды соревнуются в музыкальных раундах, поддерживают друг друга и превращают вечер после дня безопасности в яркое командное событие.</p>
+              </div>
+              <div class="detail-row">
+                <strong>Смысл</strong>
+                <p>Активность закрепляет сплочение после первого маршрутного дня: команда уже прошла путь вместе, а вечером получает возможность проявить общий голос, энергию и чувство плеча в лёгком развлекательном формате.</p>
+              </div>
+            </div>
+
+            <div class="activity-details">
+              <div class="detail-row">
+                <strong>Технические требования</strong>
+                <p>Нужно специальное ПО для формата, караоке-машина, кнопки для команд или голосования, звук, микрофоны и предварительный технический тест до начала программы.</p>
+              </div>
+              <div class="detail-row">
+                <strong>Экран и визуализация</strong>
+                <p>Нужно предусмотреть 2–3 ТВ на стойках или проектор с экраном, чтобы участники видели задания, тексты песен, счёт, раунды и визуальные подсказки.</p>
+              </div>
+              <div class="detail-row">
+                <strong>Персонал</strong>
+                <p>Нужен диджей, желательно местный, чтобы оптимизировать стоимость логистики и аренды. Диджей отвечает за звук, музыкальные отбивки, подключение оборудования и поддержку ведущего.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <section id="template" class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Рабочий шаблон для новых мероприятий</h2>
+              <p>Каждую следующую активность будем добавлять в двух версиях: тезисной для плана и подробной для сценария.</p>
+            </div>
+            <span class="badge">Шаблон</span>
+          </div>
+          <div class="flow-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Поле</th>
+                  <th>Что фиксируем</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Название активности</td><td>Короткое рабочее название</td></tr>
+                <tr><td>День и точка маршрута</td><td>Когда и где проходит</td></tr>
+                <tr><td>Смысл</td><td>Как связано с заботой о себе, безопасностью, экологией или ЗОЖ</td></tr>
+                <tr><td>Формат</td><td>Конверт, табличка, код, SurpriseMe, ведущий, гид, станция</td></tr>
+                <tr><td>Участники</td><td>Команда 8–10 человек, все участники, желающие</td></tr>
+                <tr><td>Код / артефакт</td><td>Что команда получает или создаёт</td></tr>
+                <tr><td>Вклад в финал</td><td>Как результат пригодится в общей кульминации</td></tr>
+                <tr><td>Риски и план Б</td><td>Погода, высота, усталость, связь, безопасность</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="shell">
+        Рабочий HTML-документ для проектирования слёта. Обновляется по мере разработки активностей.
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const toggle = document.querySelector('[data-theme-toggle]');
+        const root = document.documentElement;
+        let theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const icons = {
+          dark:
+            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>',
+          light:
+            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+        };
+
+        function apply(nextTheme) {
+          theme = nextTheme;
+          root.setAttribute('data-theme', theme);
+          if (toggle) {
+            toggle.innerHTML = theme === 'dark' ? icons.dark : icons.light;
+            toggle.setAttribute('aria-label', theme === 'dark' ? 'Переключить на светлую тему' : 'Переключить на тёмную тему');
+          }
+        }
+
+        apply(theme);
+        toggle && toggle.addEventListener('click', function () {
+          apply(theme === 'dark' ? 'light' : 'dark');
+        });
+      })();
+    </script>
+  </body>
+</html>
