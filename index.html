@@ -100,7 +100,7 @@
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
         scroll-behavior: smooth;
-        scroll-padding-top: var(--space-16);
+        scroll-padding-top: 240px;
       }
 
       body {
@@ -345,13 +345,16 @@
 
       .layout {
         display: grid;
-        grid-template-columns: 280px minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         gap: var(--space-10);
         align-items: start;
         padding-bottom: var(--space-20);
       }
 
       .day-menu {
+        position: sticky;
+        top: 72px;
+        z-index: 15;
         margin-top: var(--space-6);
         margin-bottom: var(--space-8);
       }
@@ -359,11 +362,12 @@
       .day-menu-inner {
         border: 1px solid color-mix(in oklab, var(--color-border) 74%, transparent);
         border-radius: calc(var(--radius-xl) + var(--space-1));
-        background: color-mix(in oklab, var(--color-surface) 92%, transparent);
+        background: color-mix(in oklab, var(--color-surface) 94%, transparent);
+        backdrop-filter: blur(14px);
         box-shadow: var(--shadow-md);
-        padding: clamp(var(--space-4), 3vw, var(--space-6));
+        padding: clamp(var(--space-3), 2.5vw, var(--space-5));
         display: grid;
-        gap: var(--space-4);
+        gap: var(--space-3);
       }
 
       .day-menu-head {
@@ -429,21 +433,6 @@
         color: inherit;
       }
 
-      aside {
-        position: sticky;
-        top: 88px;
-        border: 1px solid color-mix(in oklab, var(--color-border) 76%, transparent);
-        border-radius: var(--radius-xl);
-        background: color-mix(in oklab, var(--color-surface) 84%, transparent);
-        box-shadow: var(--shadow-md);
-        padding: var(--space-4);
-      }
-
-      nav[aria-label='Оглавление'] {
-        display: grid;
-        gap: var(--space-2);
-      }
-
       nav h2 {
         margin-bottom: var(--space-2);
         font-family: var(--font-body);
@@ -482,6 +471,7 @@
         background: color-mix(in oklab, var(--color-surface) 92%, transparent);
         box-shadow: var(--shadow-md);
         padding: clamp(var(--space-5), 4vw, var(--space-8));
+        scroll-margin-top: 240px;
       }
 
       .section-head {
@@ -773,13 +763,8 @@
 
       @media (max-width: 920px) {
         .hero-grid,
-        .layout,
         .activity-hero {
           grid-template-columns: 1fr;
-        }
-
-        aside {
-          position: static;
         }
 
         .grid-2,
@@ -792,7 +777,24 @@
         }
 
         .day-menu-list {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: var(--space-2);
+        }
+
+        .day-menu-item {
+          padding: var(--space-3) var(--space-3);
+        }
+
+        .day-menu-day {
+          font-size: var(--text-base);
+        }
+
+        .day-menu-month {
+          display: none;
+        }
+
+        .day-menu-head {
+          display: none;
         }
 
         .day-menu {
@@ -817,6 +819,18 @@
 
         .chip {
           display: none;
+        }
+
+        html {
+          scroll-padding-top: 200px;
+        }
+
+        .section-card {
+          scroll-margin-top: 200px;
+        }
+
+        .day-menu {
+          top: 64px;
         }
       }
 
@@ -916,20 +930,6 @@
     </nav>
 
     <div class="shell layout">
-      <aside>
-        <nav aria-label="Оглавление">
-          <h2>Навигация</h2>
-          <a class="nav-link" href="#concept">Концепция мероприятия</a>
-          <a class="nav-link" href="#mechanics">Командная механика</a>
-          <a class="nav-link" href="#program">Карта программы</a>
-          <!-- <a class="nav-link" href="#activity-chain">Сквозная цепочка</a> -->
-          <a class="nav-link" href="#day-25">25 июня</a>
-          <a class="nav-link" href="#day-26">26 июня</a>
-          <a class="nav-link" href="#day-27">27 июня</a>
-          <a class="nav-link" href="#day-28">28 июня</a>
-        </nav>
-      </aside>
-
       <main id="content">
         <section id="concept" class="section-card">
           <div class="section-head">
