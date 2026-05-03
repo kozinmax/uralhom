@@ -593,6 +593,42 @@
         text-underline-offset: 0.18em;
       }
 
+      a.day-card {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+      }
+
+      a.day-card:hover,
+      a.day-card:focus-visible {
+        border-color: color-mix(in oklab, var(--color-primary) 60%, transparent);
+        background: color-mix(in oklab, var(--color-primary) 8%, var(--color-surface));
+        transform: translateY(-1px);
+        outline: none;
+      }
+
+      a.day-card .day-card-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35em;
+        margin-top: var(--space-3);
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: var(--text-sm);
+      }
+
+      a.day-card .day-card-cta::after {
+        content: '→';
+        transition: transform 0.2s ease;
+      }
+
+      a.day-card:hover .day-card-cta::after,
+      a.day-card:focus-visible .day-card-cta::after {
+        transform: translateX(3px);
+      }
+
       .flow-table {
         overflow-x: auto;
         border: 1px solid color-mix(in oklab, var(--color-border) 76%, transparent);
@@ -956,34 +992,38 @@
             <span class="badge">Тайминг</span>
           </div>
           <div class="timeline">
-            <article class="day-card">
+            <a class="day-card" href="#day-25">
               <time>25 июня · четверг</time>
               <div>
                 <strong>День приезда и настройки</strong>
-                <p>Приезд, заселение, ужин, открытие, 30 минут правил безопасности и объединённая командная активность <a href="#activity-team-expedition">«Наша экспедиция: кто идёт к вершине»</a> с плакатом А3 и шуточными походными ролями.</p>
+                <p>Приезд, заселение, ужин, открытие, 30 минут правил безопасности и объединённая командная активность «Наша экспедиция: кто идёт к вершине» с плакатом А3 и шуточными походными ролями.</p>
+                <span class="day-card-cta">Перейти к описанию дня</span>
               </div>
-            </article>
-            <article class="day-card">
+            </a>
+            <a class="day-card" href="#day-26">
               <time>26 июня · пятница</time>
               <div>
                 <strong>День заботы о себе через безопасность</strong>
-                <p>Чегет, подъём до Чегет-3, треккинговые палки, озеро Донгуз Орун кёль: участники учатся замечать своё состояние, среду, темп и людей рядом. Маршрут построен как <a href="#day-26">маршрут внимания и заботы</a>; вечером проводим <a href="#activity-choir-battle">«Битву хоров»</a> с фуршетом в ресторане отеля.</p>
+                <p>Чегет, подъём до Чегет-3, треккинговые палки, озеро Донгуз Орун кёль: участники учатся замечать своё состояние, среду, темп и людей рядом. Маршрут построен как маршрут внимания и заботы; вечером проводим «Битву хоров» с фуршетом в ресторане отеля.</p>
+                <span class="day-card-cta">Перейти к описанию дня</span>
               </div>
-            </article>
-            <article class="day-card">
+            </a>
+            <a class="day-card" href="#day-27">
               <time>27 июня · суббота</time>
               <div>
                 <strong>День экологии и День молодёжи</strong>
                 <p>Маршрут к водопаду Девичьи косы, экологические задания, диалог «без галстуков» и праздничный ужин.</p>
+                <span class="day-card-cta">Перейти к описанию дня</span>
               </div>
-            </article>
-            <article class="day-card">
+            </a>
+            <a class="day-card" href="#day-28">
               <time>28 июня · воскресенье</time>
               <div>
                 <strong>День достижения целей и общего финала</strong>
                 <p>Подъём на «Гарабаши», мотивационный блок, общий сбор команд, финальный «Код высоты» или «Манифест заботы».</p>
+                <span class="day-card-cta">Перейти к описанию дня</span>
               </div>
-            </article>
+            </a>
           </div>
         </section>
 
