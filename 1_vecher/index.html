@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Активность первого вечера: «Наша экспедиция: кто идёт к вершине» · Уралхим, Приэльбрусье 2026</title>
+    <meta
+      name="description"
+      content="Сценарий активности первого вечера 25 июня 20:40–21:50: плакат А3 «Наша экспедиция», уникальные наклейки качеств и ресурсов, шуточные походные роли и представление команд."
+    />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=zodiak@500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+        --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+        --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+        --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+        --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+        --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --space-10: 2.5rem;
+        --space-12: 3rem;
+        --space-16: 4rem;
+        --space-20: 5rem;
+        --radius-md: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-xl: 1.25rem;
+        --radius-full: 9999px;
+        --color-bg: #f4f0e8;
+        --color-surface: #fbfaf6;
+        --color-surface-2: #efe8dc;
+        --color-border: #d7cdbd;
+        --color-divider: #e6dccd;
+        --color-text: #27241d;
+        --color-text-muted: #746d60;
+        --color-text-faint: #a99f90;
+        --color-primary: #2f6651;
+        --color-primary-hover: #244f3f;
+        --color-primary-highlight: #dce8de;
+        --color-gold: #b9832f;
+        --color-blue: #486f83;
+        --shadow-sm: 0 1px 2px rgba(43, 35, 23, 0.06);
+        --shadow-md: 0 8px 24px rgba(43, 35, 23, 0.08);
+        --shadow-lg: 0 24px 60px rgba(43, 35, 23, 0.12);
+        --font-display: 'Zodiak', Georgia, serif;
+        --font-body: 'Satoshi', 'Inter', sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--color-text);
+        background:
+          radial-gradient(circle at 12% 8%, rgba(47, 102, 81, 0.08), transparent 34%),
+          radial-gradient(circle at 88% 18%, rgba(72, 111, 131, 0.10), transparent 32%),
+          linear-gradient(180deg, #f6f1e8 0%, var(--color-bg) 48%, #ece5d9 100%);
+        font-family: var(--font-body), 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-display);
+        line-height: 1.08;
+        text-wrap: balance;
+        font-weight: 700;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - var(--space-8)));
+        margin-inline: auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        background: color-mix(in oklab, var(--color-bg) 90%, transparent);
+        backdrop-filter: blur(16px);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+        padding-block: var(--space-4);
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        min-width: 0;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 2.25rem;
+        height: 2.25rem;
+        place-items: center;
+        border-radius: var(--radius-lg);
+        color: var(--color-primary);
+        background: var(--color-primary-highlight);
+      }
+
+      .brand strong {
+        display: block;
+        font-size: var(--text-sm);
+        letter-spacing: 0.01em;
+      }
+
+      .brand .brand-sub {
+        display: block;
+        color: var(--color-text-muted);
+        font-size: var(--text-xs);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        flex-wrap: wrap;
+      }
+
+      .chip,
+      .nav-link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        border: 1px solid color-mix(in oklab, var(--color-border) 84%, transparent);
+        border-radius: var(--radius-full);
+        background: color-mix(in oklab, var(--color-surface) 84%, transparent);
+        padding: var(--space-2) var(--space-4);
+        color: var(--color-text);
+        font-size: var(--text-sm);
+        text-decoration: none;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .nav-link:hover,
+      .nav-link:focus-visible {
+        border-color: color-mix(in oklab, var(--color-primary) 40%, var(--color-border));
+        background: var(--color-primary-highlight);
+        color: var(--color-primary-hover);
+      }
+
+      .chip {
+        color: var(--color-text-muted);
+      }
+
+      .day-menu {
+        position: sticky;
+        top: 72px;
+        z-index: 15;
+        margin-top: var(--space-6);
+        margin-bottom: var(--space-8);
+      }
+
+      .day-menu-inner {
+        border: 1px solid color-mix(in oklab, var(--color-border) 74%, transparent);
+        border-radius: calc(var(--radius-xl) + var(--space-1));
+        background: color-mix(in oklab, var(--color-surface) 94%, transparent);
+        backdrop-filter: blur(14px);
+        box-shadow: var(--shadow-md);
+        padding: clamp(var(--space-3), 2.5vw, var(--space-5));
+        display: grid;
+        gap: var(--space-3);
+      }
+
+      .day-menu-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-3);
+        flex-wrap: wrap;
+      }
+
+      .day-menu-title {
+        font-family: var(--font-body);
+        font-size: var(--text-sm);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        margin: 0;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        border-radius: var(--radius-full);
+        background: var(--color-primary-highlight);
+        color: var(--color-primary-hover);
+        font-size: var(--text-xs);
+        font-weight: 700;
+        padding: var(--space-1) var(--space-3);
+        white-space: nowrap;
+      }
+
+      .day-menu-list {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: var(--space-3);
+      }
+
+      .day-menu-item {
+        display: grid;
+        gap: var(--space-1);
+        align-content: center;
+        text-align: left;
+        text-decoration: none;
+        border: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        border-radius: var(--radius-xl);
+        background: color-mix(in oklab, var(--color-surface-2) 34%, var(--color-surface));
+        padding: var(--space-4) var(--space-5);
+        color: var(--color-text);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .day-menu-item:hover,
+      .day-menu-item:focus-visible {
+        border-color: color-mix(in oklab, var(--color-primary) 40%, var(--color-border));
+        background: var(--color-primary-highlight);
+        color: var(--color-primary-hover);
+      }
+
+      .day-menu-item.is-program {
+        background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+        color: #fff;
+        border-color: transparent;
+      }
+
+      .day-menu-item.is-program:hover,
+      .day-menu-item.is-program:focus-visible {
+        filter: brightness(1.05);
+        background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+        color: #fff;
+      }
+
+      .day-menu-day {
+        font-family: var(--font-display);
+        font-size: var(--text-xl);
+        font-weight: 700;
+        line-height: 1.05;
+      }
+
+      .day-menu-month {
+        font-size: var(--text-xs);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+      }
+
+      .day-menu-item:hover .day-menu-month,
+      .day-menu-item:focus-visible .day-menu-month {
+        color: inherit;
+      }
+
+      .day-menu-item.is-program .day-menu-month {
+        color: rgba(255, 255, 255, 0.86);
+      }
+
+      main {
+        padding-bottom: var(--space-20);
+      }
+
+      .hero {
+        padding-block: clamp(var(--space-10), 6vw, var(--space-16));
+      }
+
+      .hero-card {
+        border: 1px solid color-mix(in oklab, var(--color-border) 74%, transparent);
+        border-radius: calc(var(--radius-xl) + var(--space-1));
+        background:
+          linear-gradient(135deg, color-mix(in oklab, var(--color-surface) 96%, transparent), color-mix(in oklab, var(--color-surface) 88%, transparent)),
+          radial-gradient(circle at 86% 14%, rgba(185, 131, 47, 0.18), transparent 32%),
+          radial-gradient(circle at 12% 90%, rgba(47, 102, 81, 0.16), transparent 30%);
+        box-shadow: var(--shadow-lg);
+        padding: clamp(var(--space-6), 5vw, var(--space-12));
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: var(--space-2);
+        border: 1px solid color-mix(in oklab, var(--color-primary) 22%, var(--color-border));
+        border-radius: var(--radius-full);
+        background: color-mix(in oklab, var(--color-primary-highlight) 64%, transparent);
+        color: var(--color-primary-hover);
+        font-size: var(--text-xs);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        padding: var(--space-2) var(--space-4);
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 920px;
+        margin-top: var(--space-5);
+        font-size: var(--text-2xl);
+        letter-spacing: -0.035em;
+      }
+
+      .lede {
+        max-width: 760px;
+        margin-top: var(--space-5);
+        color: var(--color-text-muted);
+        font-size: var(--text-lg);
+      }
+
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+        margin-top: var(--space-8);
+      }
+
+      .meta-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-3) var(--space-4);
+        border: 1px solid color-mix(in oklab, var(--color-border) 80%, transparent);
+        border-radius: var(--radius-full);
+        background: color-mix(in oklab, var(--color-surface) 80%, transparent);
+        font-size: var(--text-sm);
+        font-weight: 700;
+      }
+
+      .meta-pill .meta-label {
+        color: var(--color-text-muted);
+        font-weight: 500;
+      }
+
+      .section {
+        padding-block: var(--space-8);
+      }
+
+      .section-card {
+        border: 1px solid color-mix(in oklab, var(--color-border) 74%, transparent);
+        border-radius: calc(var(--radius-xl) + var(--space-1));
+        background: color-mix(in oklab, var(--color-surface) 92%, transparent);
+        box-shadow: var(--shadow-md);
+        padding: clamp(var(--space-5), 4vw, var(--space-8));
+      }
+
+      .section-head {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: var(--space-4);
+        margin-bottom: var(--space-6);
+        flex-wrap: wrap;
+      }
+
+      .section-head h2 {
+        font-size: var(--text-xl);
+        letter-spacing: -0.025em;
+      }
+
+      .section-head p {
+        margin-top: var(--space-3);
+        color: var(--color-text-muted);
+      }
+
+      .grid-2,
+      .grid-3 {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .mini-card {
+        border: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        border-radius: var(--radius-xl);
+        background: color-mix(in oklab, var(--color-surface-2) 34%, var(--color-surface));
+        padding: var(--space-5);
+      }
+
+      .mini-card strong {
+        display: block;
+        margin-bottom: var(--space-2);
+        font-family: var(--font-display);
+        font-size: var(--text-base);
+        color: var(--color-text);
+      }
+
+      .mini-card p {
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+      }
+
+      .list {
+        display: grid;
+        gap: var(--space-3);
+        list-style: none;
+      }
+
+      .list li {
+        position: relative;
+        padding-left: var(--space-5);
+        color: var(--color-text-muted);
+      }
+
+      .list li::before {
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: var(--radius-full);
+        background: var(--color-primary);
+        content: '';
+      }
+
+      .timeline {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .slot {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: var(--space-5);
+        padding: var(--space-5);
+        border: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        border-radius: var(--radius-xl);
+        background: color-mix(in oklab, var(--color-surface) 96%, transparent);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .slot.is-accent {
+        background:
+          linear-gradient(135deg, color-mix(in oklab, var(--color-primary-highlight) 70%, var(--color-surface)), var(--color-surface));
+        border-color: color-mix(in oklab, var(--color-primary) 28%, var(--color-border));
+      }
+
+      .slot-time {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+      }
+
+      .slot-time strong {
+        font-family: var(--font-display);
+        font-size: var(--text-lg);
+        color: var(--color-primary-hover);
+        letter-spacing: -0.02em;
+      }
+
+      .slot-time .slot-tag {
+        font-size: var(--text-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--color-text-faint);
+      }
+
+      .slot-body h3 {
+        margin-bottom: var(--space-2);
+        font-size: var(--text-base);
+        letter-spacing: -0.015em;
+      }
+
+      .slot-body p {
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+      }
+
+      .slot-body p + p {
+        margin-top: var(--space-2);
+      }
+
+      .activity-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1fr);
+        gap: var(--space-6);
+        align-items: stretch;
+      }
+
+      .poster {
+        position: relative;
+        min-height: 360px;
+        overflow: hidden;
+        border: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        border-radius: var(--radius-xl);
+        background:
+          linear-gradient(180deg, color-mix(in oklab, var(--color-blue) 20%, var(--color-surface)), var(--color-surface)),
+          radial-gradient(circle at 25% 18%, color-mix(in oklab, var(--color-gold) 18%, transparent), transparent 12rem);
+        padding: var(--space-5);
+      }
+
+      .trail {
+        position: absolute;
+        inset: 18% 8% 12% 8%;
+        color: color-mix(in oklab, var(--color-primary) 62%, var(--color-text));
+      }
+
+      .hiker {
+        position: absolute;
+        display: grid;
+        gap: var(--space-1);
+        width: 84px;
+        justify-items: center;
+        color: var(--color-text);
+        font-size: 0.68rem;
+        font-weight: 700;
+      }
+
+      .hiker .head {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--color-gold);
+        box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-gold) 25%, transparent);
+      }
+
+      .hiker .body {
+        width: 24px;
+        height: 34px;
+        border-radius: 12px 12px 8px 8px;
+        background: var(--color-primary);
+      }
+
+      .hiker .pack {
+        width: 42px;
+        min-height: 24px;
+        border: 1px dashed color-mix(in oklab, var(--color-primary) 58%, var(--color-border));
+        border-radius: var(--radius-md);
+        background: color-mix(in oklab, var(--color-surface) 78%, transparent);
+      }
+
+      .hiker .name {
+        border-radius: var(--radius-full);
+        background: var(--color-surface);
+        padding: 0.08rem 0.45rem;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .h1pos {
+        left: 8%;
+        bottom: 14%;
+      }
+      .h2pos {
+        left: 22%;
+        bottom: 28%;
+      }
+      .h3pos {
+        left: 36%;
+        bottom: 42%;
+      }
+      .h4pos {
+        left: 54%;
+        bottom: 55%;
+      }
+      .h5pos {
+        left: 70%;
+        bottom: 68%;
+      }
+
+      .activity-details {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .detail-row {
+        border-radius: var(--radius-lg);
+        background: color-mix(in oklab, var(--color-surface-2) 42%, transparent);
+        padding: var(--space-4);
+      }
+
+      .detail-row strong {
+        display: block;
+        margin-bottom: var(--space-1);
+      }
+
+      .detail-row p {
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+      }
+
+      .accent-block {
+        padding: clamp(var(--space-6), 4vw, var(--space-10));
+        border: none;
+        color: #fff;
+        background:
+          radial-gradient(circle at 82% 14%, rgba(255, 255, 255, 0.16), transparent 22%),
+          linear-gradient(135deg, var(--color-primary-hover), var(--color-blue));
+      }
+
+      .accent-block h2 {
+        color: #fff;
+        font-size: var(--text-xl);
+        letter-spacing: -0.025em;
+      }
+
+      .accent-block p {
+        max-width: 880px;
+        margin-top: var(--space-4);
+        color: rgba(255, 255, 255, 0.88);
+        font-size: var(--text-base);
+      }
+
+      .accent-block p + p {
+        margin-top: var(--space-3);
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        margin-top: var(--space-6);
+      }
+
+      .badges span {
+        padding: var(--space-2) var(--space-4);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: var(--radius-full);
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: var(--text-xs);
+        font-weight: 700;
+      }
+
+      .footer-back {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-3);
+        padding-block: var(--space-8) var(--space-12);
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        min-height: 48px;
+        padding: var(--space-3) var(--space-6);
+        border-radius: var(--radius-full);
+        font-size: var(--text-sm);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .back-link.primary {
+        color: #fff;
+        background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+        box-shadow: 0 6px 18px rgba(47, 102, 81, 0.22);
+      }
+
+      .back-link.primary:hover {
+        filter: brightness(1.05);
+      }
+
+      .back-link.secondary {
+        border: 1px solid color-mix(in oklab, var(--color-border) 84%, transparent);
+        background: color-mix(in oklab, var(--color-surface) 84%, transparent);
+        color: var(--color-text);
+      }
+
+      .back-link.secondary:hover {
+        border-color: color-mix(in oklab, var(--color-primary) 40%, var(--color-border));
+        background: var(--color-primary-highlight);
+        color: var(--color-primary-hover);
+      }
+
+      .back-link svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      footer.page-footer {
+        padding-block: var(--space-8) var(--space-12);
+        color: var(--color-text-muted);
+        font-size: var(--text-xs);
+        text-align: center;
+      }
+
+      @media (max-width: 980px) {
+        .day-menu-list {
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+          gap: var(--space-2);
+        }
+
+        .day-menu-item {
+          padding: var(--space-3) var(--space-3);
+        }
+
+        .day-menu-day {
+          font-size: var(--text-base);
+        }
+
+        .day-menu-month {
+          display: none;
+        }
+
+        .day-menu-head {
+          display: none;
+        }
+
+        .grid-2,
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+
+        .slot {
+          grid-template-columns: 1fr;
+          gap: var(--space-3);
+        }
+
+        .activity-hero {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .shell {
+          width: min(100% - var(--space-5), 1180px);
+        }
+
+        .day-menu {
+          top: 64px;
+        }
+
+        .topbar {
+          align-items: flex-start;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shell topbar">
+        <a class="brand" href="../" aria-label="К общей программе слёта Уралхим">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <path d="M3 19.5 10.6 7.2l4.1 6.8 2.2-3.2L23 19.5H3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+              <path d="M10.6 7.2 12 13h2.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span>
+            <strong>Уралхим · Приэльбрусье</strong>
+            <span class="brand-sub">25 июня · Активность первого вечера</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <span class="chip">25–28 июня 2026</span>
+          <a class="nav-link" href="../" aria-label="К общей программе слёта">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+            К общей программе
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="shell day-menu" aria-label="Дни пребывания">
+      <div class="day-menu-inner">
+        <div class="day-menu-head">
+          <h2 class="day-menu-title">Расписание по дням</h2>
+          <span class="badge">25–28 июня</span>
+        </div>
+        <div class="day-menu-list">
+          <a class="day-menu-item" href="../#day-25">
+            <span class="day-menu-day">25 июня</span>
+            <span class="day-menu-month">Заезд · знакомство</span>
+          </a>
+          <a class="day-menu-item" href="../#day-26">
+            <span class="day-menu-day">26 июня</span>
+            <span class="day-menu-month">Высота · команды</span>
+          </a>
+          <a class="day-menu-item" href="../#day-27">
+            <span class="day-menu-day">27 июня</span>
+            <span class="day-menu-month">Маршрут заботы</span>
+          </a>
+          <a class="day-menu-item" href="../#day-28">
+            <span class="day-menu-day">28 июня</span>
+            <span class="day-menu-month">Финал · отъезд</span>
+          </a>
+          <a class="day-menu-item is-program" href="../">
+            <span class="day-menu-day">Программа</span>
+            <span class="day-menu-month">Общая карта слёта</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="shell hero">
+        <div class="hero-card">
+          <span class="eyebrow">Вечер 25 июня · 20:40–21:50</span>
+          <h1>Активность первого вечера: «Наша экспедиция: кто идёт к вершине»</h1>
+          <p class="lede">
+            Объединённый блок: плакат А3 с командой, идущей в гору, и шуточные походные роли. Формат подходит после дороги и 30-минутного блока правил безопасности — участники переходят из состояния «мы приехали» в состояние «мы команда, у которой начинается экспедиция».
+          </p>
+          <div class="hero-meta">
+            <span class="meta-pill"><span class="meta-label">Дата</span>25 июня, четверг</span>
+            <span class="meta-pill"><span class="meta-label">Время</span>20:40–21:50</span>
+            <span class="meta-pill"><span class="meta-label">Формат</span>Командная активность с плакатом А3</span>
+            <span class="meta-pill"><span class="meta-label">Участники</span>10 команд</span>
+            <span class="meta-pill"><span class="meta-label">Ведущий</span>Иван Гусаров</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell section">
+        <div class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>О чём активность</h2>
+              <p>Плакат, наклейки, шуточные роли и первое командное представление в одном блоке.</p>
+            </div>
+            <span class="badge">Концепция</span>
+          </div>
+
+          <div class="activity-hero">
+            <div class="poster" aria-label="Схематичная визуализация плаката А3">
+              <svg class="trail" viewBox="0 0 420 250" fill="none" aria-hidden="true">
+                <path d="M18 218C86 188 111 148 165 136c58-13 76-58 126-72 38-10 61-18 105-48" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-dasharray="4 18" />
+                <path d="M26 224 150 90l58 58 50-72 138 148H26Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" opacity=".24" />
+              </svg>
+              <div class="hiker h1pos"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+              <div class="hiker h2pos"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+              <div class="hiker h3pos"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+              <div class="hiker h4pos"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+              <div class="hiker h5pos"><span class="head"></span><span class="body"></span><span class="pack"></span><span class="name">имя</span></div>
+            </div>
+
+            <div class="activity-details">
+              <div class="detail-row">
+                <strong>Краткое описание</strong>
+                <p>Команды создают плакат А3 с изображением группы, идущей в гору: каждый выбирает себя на маршруте, подписывает имя и добавляет в свой рюкзак 2–3 уникальные наклейки с качествами, ресурсами или зонами ответственности. Предметы и роли не дублируются: если кто-то уже взял определённый ресурс, следующий выбирает из оставшихся.</p>
+                <p style="margin-top: var(--space-3)">После заполнения плаката участники распределяют шуточные походные роли — навигатор, хранитель настроения, человек-аптечка, эко-дозорный, замыкающий, мотиватор, хранитель воды, разведчик красивых видов и другие. Во второй половине каждая команда коротко представляет свою группу через плакат: кто где стоит, кто что несёт, кто за что отвечает и почему именно эта команда готова пройти маршрут вместе. Пояснения должны быть краткими, весёлыми и жизнеутверждающими.</p>
+              </div>
+              <div class="detail-row">
+                <strong>Смысл</strong>
+                <p>Плакат становится первой картой команды: на нём видно, кто как себя расположил, кто с кем рядом, кто какие ресурсы выбрал и как участники берут ответственность за себя и команду.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell section">
+        <div class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Смысл, цель и вклад в финал</h2>
+              <p>Зачем нужен этот блок именно в первый вечер и что он даёт остальным дням слёта.</p>
+            </div>
+            <span class="badge">Зачем это</span>
+          </div>
+          <div class="grid-3">
+            <div class="mini-card">
+              <strong>Цель</strong>
+              <p>Снять скованность после дороги, познакомить участников, визуально распределить ответственность и создать первое впечатление от слёта как от необычной командной экспедиции.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Как проходит</strong>
+              <p>Первая половина — работа с плакатом: каждый по очереди выбирает позицию на горной тропе, подписывает бейджик и клеит 2–3 уникальные наклейки. Вторая половина — распределение шуточных ролей и короткое весёлое представление команды.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Вклад в финал</strong>
+              <p>Команда получает свой первый игровой образ и плакат-карту, которые можно сохранить как часть дальнейшего маршрута: роль, фразу или способ поддерживать друг друга в сложных моментах.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell section" id="timing">
+        <div class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Тайминг 20:40–21:50</h2>
+              <p>Тезисный сценарий вечера с временными блоками. Каждый шаг короткий и держит общий темп.</p>
+            </div>
+            <span class="badge">70 минут</span>
+          </div>
+          <div class="timeline">
+            <article class="slot is-accent">
+              <div class="slot-time"><strong>20:40–20:45</strong><span class="slot-tag">Запуск</span></div>
+              <div class="slot-body">
+                <h3>Иван объясняет правила экспедиции</h3>
+                <p>Иван Гусаров коротко рассказывает, что сейчас команды соберут свой первый экспедиционный образ. Объясняет смысл активности и принцип «уникальности» — никто в команде не повторяется по ресурсу или роли.</p>
+                <p>Команды получают плакаты А3, набор бейджей, наборы наклеек качеств/ресурсов/ответственности и карточки шуточных ролей.</p>
+              </div>
+            </article>
+
+            <article class="slot">
+              <div class="slot-time"><strong>20:45–21:00</strong><span class="slot-tag">Шаг 1</span></div>
+              <div class="slot-body">
+                <h3>«Найди себя на маршруте»</h3>
+                <p>Каждый участник выбирает место на плакате — где он идёт по тропе, рядом с кем стоит, ближе к вершине или замыкает команду. Подписывает имя и прикрепляет бейдж/наклейку рядом со своим персонажем.</p>
+                <p>Команда видит, как распределилась её внутренняя «геометрия» уже в первый вечер.</p>
+              </div>
+            </article>
+
+            <article class="slot">
+              <div class="slot-time"><strong>21:00–21:15</strong><span class="slot-tag">Шаг 2</span></div>
+              <div class="slot-body">
+                <h3>«Что я несу в рюкзаке»</h3>
+                <p>Каждый участник выбирает 2–3 уникальные наклейки качества, ресурса или ответственности и клеит их на свой рюкзак на плакате. Повторы не допускаются: если ресурс уже взят кем-то в команде, выбирается другой.</p>
+                <p>Это первый момент честного разговора: «Что я реально готов взять с собой и за что отвечать перед командой».</p>
+              </div>
+            </article>
+
+            <article class="slot">
+              <div class="slot-time"><strong>21:15–21:25</strong><span class="slot-tag">Шаг 3</span></div>
+              <div class="slot-body">
+                <h3>«Походные роли»</h3>
+                <p>Команда распределяет шуточные походные роли: навигатор, хранитель настроения, человек-аптечка, эко-дозорный, замыкающий, мотиватор, хранитель воды, разведчик красивых видов и другие.</p>
+                <p>Роли не дублируются. Внутри команды договариваются вслух — кто за что берётся и почему именно этот человек подходит на эту роль.</p>
+              </div>
+            </article>
+
+            <article class="slot is-accent">
+              <div class="slot-time"><strong>21:25–21:45</strong><span class="slot-tag">Презентация</span></div>
+              <div class="slot-body">
+                <h3>«Представление экспедиции»</h3>
+                <p>Каждая команда по очереди коротко и весело представляет свою группу через плакат: кто где стоит, кто что несёт, кто за какую роль отвечает и почему именно эта команда готова пройти маршрут вместе.</p>
+                <p>Формат живой и жизнеутверждающий: 2 минуты на команду, без длинных монологов, с акцентом на юмор и атмосферу. Иван мягко поддерживает темп и подсказывает фразы, если команда зажалась.</p>
+              </div>
+            </article>
+
+            <article class="slot">
+              <div class="slot-time"><strong>21:45–21:50</strong><span class="slot-tag">Финал</span></div>
+              <div class="slot-body">
+                <h3>Общий вывод от Ивана</h3>
+                <p>Иван собирает результат вечера: у каждой команды появился первый образ, карта ответственности и повод поддерживать друг друга в маршруте. Связывает активность с днём 26 июня — завтра команды начнут собирать свои правила заботы через внимание, безопасность и поддержку.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell section">
+        <div class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Роль ведущего Ивана Гусарова</h2>
+              <p>Что делает ведущий по ходу активности, чтобы вечер прошёл живо и без давления.</p>
+            </div>
+            <span class="badge">Ведущий</span>
+          </div>
+          <div class="grid-2">
+            <div class="mini-card">
+              <strong>Запускает игру</strong>
+              <p>Объясняет правила, выдаёт реквизит командам, задаёт лёгкий и тёплый тон вечера. Коротко формулирует, зачем мы это делаем, и сразу переключает в действие.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Держит темп</strong>
+              <p>Следит за переходами между шагами, не даёт командам застрять на одном этапе, мягко двигает дальше. Если команда буксует, помогает короткой подсказкой или вопросом.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Помогает шутить без давления</strong>
+              <p>Поддерживает юмор и лёгкость, помогает участникам шутить про себя и команду без неловкости. Никого не выводит на сцену силой, ценит добровольное участие.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Переводит в общий смысл слёта</strong>
+              <p>В финале связывает презентации команд в общую идею вечера: 10 команд — одна экспедиция, у которой впереди три дня маршрута заботы о себе, команде и среде.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell section">
+        <div class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Материалы и что подготовить</h2>
+              <p>Список реквизита и организационных мелочей, чтобы активность стартовала без задержек.</p>
+            </div>
+            <span class="badge">Подготовка</span>
+          </div>
+          <ul class="list">
+            <li>10 плакатов А3 с изображением группы, идущей по горной тропе — по одному на каждую команду.</li>
+            <li>Наборы бейджей и стикеров для подписи имён и обозначения позиции участника на плакате.</li>
+            <li>Наклейки качеств, ресурсов и зон ответственности с запасом — чтобы хватило на уникальный выбор каждому из ~10 человек в команде.</li>
+            <li>Карточки шуточных походных ролей: навигатор, хранитель настроения, человек-аптечка, эко-дозорный, замыкающий, мотиватор, хранитель воды, разведчик красивых видов и др.</li>
+            <li>Маркеры и ручки для подписи имён, ролей и пояснений на плакате.</li>
+            <li>По желанию — лёгкие головные уборы или повязки, которые помогают командам визуально отличаться друг от друга на презентации.</li>
+            <li>Место для презентаций: свободная зона, где каждая команда может выйти с плакатом и быть видимой остальным.</li>
+            <li>Маршрутный паспорт команды, в который можно вклеить итоговое фото плаката после активности.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="shell section">
+        <div class="section-card accent-block">
+          <h2>Важно по тону</h2>
+          <p>Это первый вечер слёта после длинной дороги. Активность должна снимать напряжение, а не догружать его.</p>
+          <p>Смысловые элементы держим короткими, никаких длинных монологов от ведущего. Между шагами — пространство для живого разговора в команде, юмора и знакомства. Уникальность ресурсов и ролей создаёт честный диалог, а не соревнование.</p>
+          <p>Финал должен оставить тёплое ощущение: «у нас уже есть команда, плакат и общий повод поддерживать друг друга на маршруте».</p>
+          <div class="badges" aria-label="Тональность вечера">
+            <span>знакомство, не отчёт</span>
+            <span>смысл короткими включениями</span>
+            <span>юмор без давления</span>
+            <span>уникальность каждого участника</span>
+            <span>тёплый старт экспедиции</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="shell footer-back">
+        <a class="back-link primary" href="../#day-25" aria-label="Вернуться к описанию дня 25 июня">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+          К дню 25 июня
+        </a>
+        <a class="back-link secondary" href="../" aria-label="Вернуться к общей программе слёта Уралхим">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 12h18M12 3l9 9-9 9" />
+          </svg>
+          К общей программе слёта
+        </a>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="shell">
+        Сценарий активности первого вечера 25 июня для туристического слёта Уралхим в Приэльбрусье. Документ рабочий: тайминг и набор наклеек уточняются по согласованию с командой ведущего.
+      </div>
+    </footer>
+  </body>
+</html>
