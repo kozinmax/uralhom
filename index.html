@@ -619,6 +619,42 @@
         transform: translateX(3px);
       }
 
+      .inline-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4em;
+        margin-top: var(--space-2);
+        padding: 0.45rem 0.95rem;
+        border-radius: var(--radius-full);
+        background: var(--color-primary);
+        color: var(--color-surface);
+        font-size: var(--text-sm);
+        font-weight: 600;
+        line-height: 1.2;
+        text-decoration: none;
+        white-space: nowrap;
+        box-shadow: 0 1px 2px color-mix(in oklab, var(--color-primary) 30%, transparent);
+        transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .inline-cta::after {
+        content: '→';
+        transition: transform 0.2s ease;
+      }
+
+      .inline-cta:hover,
+      .inline-cta:focus-visible {
+        background: var(--color-primary-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px color-mix(in oklab, var(--color-primary) 30%, transparent);
+        outline: none;
+      }
+
+      .inline-cta:hover::after,
+      .inline-cta:focus-visible::after {
+        transform: translateX(3px);
+      }
+
       .flow-table {
         overflow-x: auto;
         border: 1px solid color-mix(in oklab, var(--color-border) 76%, transparent);
@@ -1356,8 +1392,13 @@
                 </tr>
                 <tr>
                   <td>20:00–00:00</td>
-                  <td><a href="https://kozinmax.github.io/uralhim/banket/" target="_blank" rel="noopener">Праздничный ужин ко Дню молодёжи</a></td>
-                  <td>Концепция вечера — «Поколение, которое оставляет правильный след». Связываем вечер с маршрутом через фото команд, фразы манифеста и энергетику Дня молодёжи. В программе: шоу «Интуиция» с руководителями и участниками, кавказские танцы, мастер-класс по музыкальным инструментам. <a href="https://kozinmax.github.io/uralhim/banket/" target="_blank" rel="noopener">Подробный сценарий вечера</a>.</td>
+                  <td>
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3);">
+                      <span>Праздничный ужин ко Дню молодёжи</span>
+                      <a class="inline-cta" href="banket/">Программа вечера</a>
+                    </div>
+                  </td>
+                  <td>Концепция вечера — «Поколение, которое оставляет правильный след». Связываем вечер с маршрутом через фото команд, фразы манифеста и энергетику Дня молодёжи. В программе: шоу «Интуиция» с руководителями и участниками, кавказские танцы, мастер-класс по музыкальным инструментам.</td>
                   <td>Эмоциональная кульминация дня и общий манифест поколения.</td>
                 </tr>
               </tbody>
