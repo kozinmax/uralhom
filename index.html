@@ -316,6 +316,15 @@
         opacity: 0.9;
       }
 
+      .hero-logo {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-block: var(--space-2) var(--space-5);
+        border-radius: var(--radius-lg);
+      }
+
       .hero-card dl {
         display: grid;
         gap: var(--space-4);
@@ -343,7 +352,7 @@
       }
 
       .day-menu {
-        margin-top: calc(-1 * var(--space-6));
+        margin-top: var(--space-6);
         margin-bottom: var(--space-8);
       }
 
@@ -751,7 +760,7 @@
         }
 
         .day-menu {
-          margin-top: 0;
+          margin-top: var(--space-4);
         }
       }
 
@@ -824,9 +833,7 @@
           </p>
         </div>
         <aside class="hero-card" aria-label="Ключевые параметры">
-          <svg class="mountain-line" viewBox="0 0 420 120" fill="none" aria-hidden="true">
-            <path d="M10 96h400M34 96 112 26l42 48 31-30 74 52 42-64 85 64" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+          <img class="hero-logo" src="assets/logo-2.jpg" alt="Логотип слёта Уралхим: безопасность, экология, осознанность" />
           <dl>
             <div>
               <dt>Участники</dt>
