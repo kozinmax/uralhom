@@ -638,6 +638,52 @@
         transform: translateX(3px);
       }
 
+      .concept-visual-cta {
+        margin-top: var(--space-5);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+        padding: var(--space-4) var(--space-5);
+        border: 1px solid color-mix(in oklab, var(--color-primary) 32%, transparent);
+        border-radius: var(--radius-xl);
+        background: linear-gradient(
+          135deg,
+          color-mix(in oklab, var(--color-primary-highlight) 70%, transparent),
+          color-mix(in oklab, var(--color-surface-2) 60%, var(--color-surface))
+        );
+      }
+
+      .concept-visual-cta-text {
+        flex: 1 1 240px;
+        min-width: 0;
+      }
+
+      .concept-visual-cta-text strong {
+        display: block;
+        color: var(--color-text);
+        font-size: var(--text-base);
+        margin-bottom: 0.2em;
+      }
+
+      .concept-visual-cta-text p {
+        margin: 0;
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+      }
+
+      .concept-visual-cta .inline-cta {
+        margin-top: 0;
+        flex-shrink: 0;
+      }
+
+      @media (max-width: 540px) {
+        .concept-visual-cta .inline-cta {
+          white-space: normal;
+        }
+      }
+
       .flow-table {
         overflow-x: auto;
         border: 1px solid color-mix(in oklab, var(--color-border) 76%, transparent);
@@ -964,6 +1010,13 @@
             <li><strong>Забота о других:</strong> безопасность, взаимовыручка, первая помощь, командное движение.</li>
             <li><strong>Забота о среде:</strong> экологичное поведение, бережное отношение к месту, след после себя.</li>
           </ul>
+          <div class="concept-visual-cta">
+            <div class="concept-visual-cta-text">
+              <strong>Визуальная концепция слёта</strong>
+              <p>Логотип, фирменные цвета и носители стиля — как «Высота заботы» выглядит и считывается на месте.</p>
+            </div>
+            <a class="inline-cta" href="logo/">Смотреть визуальную концепцию</a>
+          </div>
         </section>
 
         <section id="mechanics" class="section-card">
