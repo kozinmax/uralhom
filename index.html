@@ -370,23 +370,6 @@
         gap: var(--space-3);
       }
 
-      .day-menu-head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: var(--space-3);
-        flex-wrap: wrap;
-      }
-
-      .day-menu-title {
-        font-family: var(--font-body);
-        font-size: var(--text-sm);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--color-text-muted);
-        margin: 0;
-      }
-
       .day-menu-list {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -829,10 +812,6 @@
           display: none;
         }
 
-        .day-menu-head {
-          display: none;
-        }
-
         .day-menu {
           margin-top: var(--space-4);
         }
@@ -899,7 +878,6 @@
           </span>
         </a>
         <div class="header-actions">
-          <span class="chip">25–28 июня 2026</span>
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
@@ -940,10 +918,6 @@
 
     <nav class="shell day-menu" aria-label="Дни пребывания">
       <div class="day-menu-inner">
-        <div class="day-menu-head">
-          <h2 class="day-menu-title">Дни пребывания</h2>
-          <span class="badge">25–28 июня</span>
-        </div>
         <div class="day-menu-list">
           <a class="day-menu-item" href="#day-25">
             <span class="day-menu-day">25 июня</span>
