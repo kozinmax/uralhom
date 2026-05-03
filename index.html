@@ -342,6 +342,84 @@
         padding-bottom: var(--space-20);
       }
 
+      .day-menu {
+        margin-top: calc(-1 * var(--space-6));
+        margin-bottom: var(--space-8);
+      }
+
+      .day-menu-inner {
+        border: 1px solid color-mix(in oklab, var(--color-border) 74%, transparent);
+        border-radius: calc(var(--radius-xl) + var(--space-1));
+        background: color-mix(in oklab, var(--color-surface) 92%, transparent);
+        box-shadow: var(--shadow-md);
+        padding: clamp(var(--space-4), 3vw, var(--space-6));
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .day-menu-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-3);
+        flex-wrap: wrap;
+      }
+
+      .day-menu-title {
+        font-family: var(--font-body);
+        font-size: var(--text-sm);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        margin: 0;
+      }
+
+      .day-menu-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--space-3);
+      }
+
+      .day-menu-item {
+        display: grid;
+        gap: var(--space-1);
+        align-content: center;
+        text-align: left;
+        text-decoration: none;
+        border: 1px solid color-mix(in oklab, var(--color-border) 72%, transparent);
+        border-radius: var(--radius-xl);
+        background: color-mix(in oklab, var(--color-surface-2) 34%, var(--color-surface));
+        padding: var(--space-4) var(--space-5);
+        color: var(--color-text);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .day-menu-item:hover,
+      .day-menu-item:focus-visible {
+        border-color: color-mix(in oklab, var(--color-primary) 40%, var(--color-border));
+        background: var(--color-primary-highlight);
+        color: var(--color-primary-hover);
+      }
+
+      .day-menu-day {
+        font-family: var(--font-display);
+        font-size: var(--text-xl);
+        font-weight: 700;
+        line-height: 1.05;
+      }
+
+      .day-menu-month {
+        font-size: var(--text-xs);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+      }
+
+      .day-menu-item:hover .day-menu-month,
+      .day-menu-item:focus-visible .day-menu-month {
+        color: inherit;
+      }
+
       aside {
         position: sticky;
         top: 88px;
@@ -667,6 +745,14 @@
         .day-card {
           grid-template-columns: 1fr;
         }
+
+        .day-menu-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .day-menu {
+          margin-top: 0;
+        }
       }
 
       @media (max-width: 640px) {
@@ -759,10 +845,41 @@
       </div>
     </div>
 
+    <nav class="shell day-menu" aria-label="Дни пребывания">
+      <div class="day-menu-inner">
+        <div class="day-menu-head">
+          <h2 class="day-menu-title">Дни пребывания</h2>
+          <span class="badge">25–28 июня</span>
+        </div>
+        <div class="day-menu-list">
+          <a class="day-menu-item" href="#day-25">
+            <span class="day-menu-day">25 июня</span>
+            <span class="day-menu-month">Заезд · знакомство</span>
+          </a>
+          <a class="day-menu-item" href="#day-26">
+            <span class="day-menu-day">26 июня</span>
+            <span class="day-menu-month">Высота · команды</span>
+          </a>
+          <a class="day-menu-item" href="#day-27">
+            <span class="day-menu-day">27 июня</span>
+            <span class="day-menu-month">Маршрут заботы</span>
+          </a>
+          <a class="day-menu-item" href="#day-28">
+            <span class="day-menu-day">28 июня</span>
+            <span class="day-menu-month">Финал · отъезд</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
     <div class="shell layout">
       <aside>
-        <nav aria-label="Дни пребывания">
-          <h2>Дни пребывания</h2>
+        <nav aria-label="Оглавление">
+          <h2>Навигация</h2>
+          <a class="nav-link" href="#concept">Концепция мероприятия</a>
+          <a class="nav-link" href="#mechanics">Командная механика</a>
+          <a class="nav-link" href="#program">Карта программы</a>
+          <!-- <a class="nav-link" href="#activity-chain">Сквозная цепочка</a> -->
           <a class="nav-link" href="#day-25">25 июня</a>
           <a class="nav-link" href="#day-26">26 июня</a>
           <a class="nav-link" href="#day-27">27 июня</a>
