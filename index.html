@@ -262,6 +262,27 @@
         text-transform: uppercase;
       }
 
+      .hero-eyebrows {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        align-items: center;
+      }
+
+      a.eyebrow-link {
+        text-decoration: none;
+        background: var(--color-primary);
+        color: var(--color-on-primary, #fff);
+        border-color: transparent;
+        transition: background 0.18s ease, transform 0.18s ease;
+      }
+
+      a.eyebrow-link:hover,
+      a.eyebrow-link:focus-visible {
+        background: var(--color-primary-hover);
+        transform: translateY(-1px);
+      }
+
       h1,
       h2,
       h3 {
@@ -936,7 +957,10 @@
     <div id="top" class="shell hero">
       <div class="hero-grid">
         <div>
-          <span class="eyebrow">Рабочая структура</span>
+          <div class="hero-eyebrows">
+            <span class="eyebrow">Рабочая структура</span>
+            <a class="eyebrow eyebrow-link" href="logo/">Визуальная концепция →</a>
+          </div>
           <h1>Туристический слёт Уралхим в Приэльбрусье</h1>
           <p class="lede">
             Основа для пошаговой разработки концепции, маршрутных активностей, командной механики и финальной кульминации. Активности будут добавляться отдельными главами и связываться гиперссылками с общей структурой.
